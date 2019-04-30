@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/app.css">
+    <title></title>
+  </head>
+  <body>
+  
+    <h1>  <nav>
+      <a href="/drivers/">BACK</a>
+    </nav>
+    <%= driver.name %>
+    <%= driver.age %>
+ </h1>
+    
+
+
+
+ <ul>
+  <% driver.companys.forEach(company => { %>
+  <li>
+   <%= company.name %>
+    </li>
+<% }) %>
+</ul>
+
+
+
+
+      <a href="/drivers/<%= driver._id  %>/edit">EDIT</a>
+
+  </body>
+</html>
