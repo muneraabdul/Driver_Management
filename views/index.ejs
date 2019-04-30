@@ -1,0 +1,29 @@
+<html>
+  <head>
+    
+   
+  </head>
+  <body> 
+    
+    <nav>
+      <a href="/companys/new">Create a New </a>
+    </nav>
+    
+    <ul>
+    <% for (i in companys) { %>
+      <li>
+        <%= companys[i].name %>, 
+        <%= companys[i].address %>, 
+        <%= companys[i].city %> ,
+        <%= companys[i].telephone %> ,
+        <%= companys[i].driver %>,
+        <%= companys[i].car %>
+      </li>
+      <a href="/companys/:id/<%= companys[i]._id %>/">Show</a>
+      <a href="/companys/new/<%= companys[i]._id %>/">New</a>
+     
+      </form>
+      <% } %>
+    </ul>
+    </body>
+</html>
